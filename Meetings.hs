@@ -75,7 +75,6 @@ filterMeetings s = do
       filteredLocal = (fmap (utcToLocalTime tz)) <$> filtered
   return filteredLocal
   where
-    calcOffset :: UTCTime -> UTCTime -> Double
     calcOffset c d = fromRational . toRational $ diffUTCTime c d
     filterFunc current m =
       if s == Upcoming
