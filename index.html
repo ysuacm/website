@@ -1,0 +1,77 @@
+---
+title: Home
+highlight: true
+id: home
+---
+
+<div class="acm-boxbg acm-mb20">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Next Meeting:</h1>
+        <h1>$nm_name$</h1>
+        <p>$nm_desc$</p>
+      </div>
+      <div class="col-sm-offset-1 col-sm-5">
+        <table class="table">
+          <tr>
+            <td>Who is speaking?</td>
+            <td class="acm-b">$nm_speaker$</td>
+          </tr>
+          <tr>
+            <td>When?</td>
+            <td class="acm-b">$nm_dt$</td>
+          </tr>
+          <tr>
+            <td>What room?</td>
+            <td class="acm-b">$nm_room$</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <h1>Welcome to the YSU ACM!</h1>
+      <p>
+        The Youngstown State University student chapter of the Association for
+        Computing Machinery (YSU ACM) hosts weekly meetings with presentations by
+        students, faculty, staff, alumni, and sometimes special
+        guests. Presentations cover all aspects of computer science and related
+        fields. Examples include presentations on ethical hacking,
+        command-line/shell tricks, functional programming, bitcoin, and
+        spreadsheet hacks to impress your supervisor.
+      </p>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Recent Presentations</h1>
+
+      <table style="width: 100%;">
+        <thead>
+          <tr>
+            <th>Speaker</th>
+            <th>Title</th>
+            <th>Date and Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          $for(presentations)$
+          <tr>
+            <td>$nm_speaker$</td>
+            <td><a href="#">$nm_name$</a></td>
+            <td>$nm_dt$</td>
+          </tr>
+          $endfor$
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

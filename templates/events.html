@@ -1,0 +1,25 @@
+<div class="acm-boxbg acm-mb20">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Upcoming Meetings</h1>
+        <p>
+          Here are some of the meetings we have planned for the near future!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  $for(presentations)$
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>$nm_name$</h2>
+      <small>Scheduled for $nm_dt$ by $nm_speaker$.</small>
+      <p>$nm_desc$</p>
+    </div>
+  </div>
+  <hr />
+  $endfor$
+</div>

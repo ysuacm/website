@@ -1,0 +1,26 @@
+<div class="acm-boxbg acm-mb20">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Previous Meetings</h1>
+        <p>
+          See information about meetings and presentations we've had in the
+          past, including summaries, slides, videos, and more!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  $for(presentations)$
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>$nm_name$</h2>
+      <small>Presented $nm_dt$ by $nm_speaker$.</small>
+      <p>$nm_desc$</p>
+    </div>
+  </div>
+  <hr />
+  $endfor$
+</div>

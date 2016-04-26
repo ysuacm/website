@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>YSU Chapter of the Association for Computing Machinery - $title$</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+          integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"
+            integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7"
+            crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-inverse acm-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="/">YSU - ACM</a>
+        <div style="float: right;">
+          <ul class="nav navbar-nav">
+            <li id="home_menu" class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li id="events_menu" class="nav-item">
+              <a class="nav-link" href="/events.html">Upcoming Events</a>
+            </li>
+            <li id="previous_menu" class="nav-item">
+              <a class="nav-link" href="/presentations.html">Previous Presentations</a>
+            </li>
+            <li id="contacts_menu" class="nav-item">
+              <a class="nav-link" href="/contacts.html">Contacts</a>
+            </li>
+            <!--<li id="about_menu" class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>-->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    $body$
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            &copy; 2016 <a href="https://elrod.me/">Ricky Elrod</a>
+            for
+            <a href="https://swww.ysu.edu/">Youngstown State University</a>
+            <span class="acm-social-links pull-right">
+              <a href="https://www.facebook.com/groups/YSUACM/">
+                <i class="fa fa-facebook-official"></i>
+              </a>
+              <a href="https://www.github.com/ysuacm">
+                <i class="fa fa-github"></i>
+              </a>
+              <a href="https://www.twitter.com/ysustudentacm">
+                <i class="fa fa-twitter-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    $if(highlight)$
+    <script>
+      $$(function() {
+        $$('#$id$_menu').addClass('active');
+      });
+    </script>
+    $endif$
+  </body>
+</html>
