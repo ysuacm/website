@@ -25,6 +25,8 @@ createMeetingsListPage s fn title previous upcoming =
           archiveCtx =
             listField "presentations" presentationCtx (sequence <$> makeItem meetings) <>
             constField "title" title <>
+            constField "id" (if s == Happened then "previous" else "upcoming") <>
+            constField "highlight" "true" <>
             defaultContext
           filename =
             if s == Happened
