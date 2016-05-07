@@ -3,27 +3,12 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Meetings where
 
---import Data.Aeson
 import Data.Default
 import qualified Data.Text as T
 import Data.Thyme
 import Data.Thyme.Format
 import Data.Thyme.Time
 import System.Locale
-
-newtype Room = Room String deriving (Eq, Ord)
-
-data Meeting a = Meeting {
-    name :: T.Text
-  , speaker :: T.Text
-  , dateTime :: a
-  , room :: Room
-  , description :: T.Text
-  , slidesUrl :: Maybe T.Text
-  } deriving (Show, Eq, Functor)
-
-meetingAt :: String -> LocalTime
-meetingAt time = readTime defaultTimeLocale "%Y-%m-%d %H:%M" time
 
 upcomingEvents :: [Meeting LocalTime]
 upcomingEvents =
@@ -52,6 +37,20 @@ upcomingEvents =
       \Information Systems student John Doe."
       Nothing
   ]
+
+newtype Room = Room String deriving (Eq, Ord)
+
+data Meeting a = Meeting {
+    name :: T.Text
+  , speaker :: T.Text
+  , dateTime :: a
+  , room :: Room
+  , description :: T.Text
+  , slidesUrl :: Maybe T.Text
+  } deriving (Show, Eq, Functor)
+
+meetingAt :: String -> LocalTime
+meetingAt time = readTime defaultTimeLocale "%Y-%m-%d %H:%M" time
 
 instance Default Room where
   def = Room "Meshel 337"
